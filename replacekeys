@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      var g = {};
+      function assignListener() {
+        /*event listener for keyboard*/
+        g.keyboard = document.querySelector("#keyboard");
+        g.keyboard.addEventListener("click", addToTextBox, false);
+      }
+      function addToTextBox(e) {
+        /* with query selector the event (e) is passed along to the function. You can examine the event and get all kinds of useful stuff from it, like type of event, where it came from, attributes like id, class list etc. */
+        if (e.target.type == 'button') {
+          switch (e.target.value) {
+            case "ENTER":
+              document.getElementById('output').value += '\n';
+              break;
+            case "SPACE":
+              document.getElementById('output').value += ' ';
+              break;
+            case "BACKSPACE":
+              document.getElementById('output').value = document.getElementById('output').value.substr(0, document.getElementById('output').value.length - 1);
+              break;
+            default:
+              document.getElementById('output').value += e.target.value;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body onload="assignListener();">
+    <div class="Row">
+      <div class="Box2">
+        <form id=keyboard>
+          <div> <input type="button" value="Q"> <input type="button" value="W"> <input type="button" value="E"> <input type="button" value="R"> <input type="button" value="T"> <input type="button" value="Y"> <input type="button" value="U"> <input type="button" value="I"> <input type="button" value="O"> <input type="button" value="P"> </div>
+          <div> <input type="button" value="A"> <input type="button" value="S"> <input type="button" value="D"> <input type="button" value="F"> <input type="button" value="G"> <input type="button" value="H"> <input type="button" value="J"> <input type="button" value="K"> <input type="button" value="L"> </div>
+          <div> <input type="button" value="Z"> <input type="button" value="X"> <input type="button" value="C"> <input type="button" value="V"> <input type="button" value="B"> <input type="button" value="N"> <input type="button" value="M"> </div>
+          <div> <input type="button" value="SPACE"> <input type="button" value="ENTER"> <input type="button" value="BACKSPACE"> </div>
+        </form>
+ <!-- <input type='text' id='output' /> --> <textarea id="output" rows="5" cols="75"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
