@@ -9,7 +9,6 @@
         g.keyboard.addEventListener('click', addToTextBox, false);
       }
       function addToTextBox(e) {
-        /* with query selector the event (e) is passed along to the function. You can examine the event and get all kinds of useful stuff from it, like type of event, where it came from, attributes like id, class list etc. */
         if (e.target.type == 'button') {
           switch (e.target.value) {
             case 'ENTER':
@@ -34,8 +33,8 @@
         <form id=keyboard>
           <div> <input type='button' value='price("'> <input type='button' value='last_trade_price ("'> <input type='button' value='position_recent_pnl("'> <input type='button' value='get_variable("var")'> <input type='button' value='false'> <input type='button' value=' == '> <input type='button' value=' + '> <input type='button' value=' * '> <input type='button' value=' ** '> </div>
           <div> <input type='button' value='position("'> <input type='button' value='position_break_even_price("'> <input type='button' value='position_notional("'> <input type='button' value='balance("'> <input type='button' value='true'> <input type='button' value=' != '> <input type='button' value=' - '> <input type='button' value=' / '> <input type='button' value=' // '> </div>
-          <div> <input type='button' value='("'> <input type='button' value='")'> <input type='button' value=' = '> <input type='button' value=' <= '> <input type='button' value=' < '> <input type='button' value=' > '> <input type='button' value=' >= '> <input type='button' value=' % '> <input type='button' value=' if '> </div>
-          <div> <input type='button' value='-PERP")'> <input type='button' value='/USD")'> <input type='button' value='/USDT")'> <input type='button' value='/BTC")'> <input type='button' value='USD")'> <input type='button' value='USDT")'> <input type='button' value='BTC")'> <input type='button' value=' else '> <input type='button' value=' not '> </div>
+          <div> <input type='button' value='("'> <input type='button' value='")'> <input type='button' value=' = '> <input type='button' value=' <= '> <input type='button' value=' < '> <input type='button' value=' > '> <input type='button' value=' >= '> <input type='button' value=' % '> <input type='button' value=' if '> <input type='button' value=' else '> <input type='button' value=' not '> <input type='button' value='USD")'> <input type='button' value='USDT")'> <input type='button' value='BTC")'> </div>
+          <div> <input type='button' value='-PERP")'> <input type='button' value='/USD")'> <input type='button' value='/USDT")'> <input type='button' value='/BTC")'> <input type='button' value='USD")'> <input type='button' value='USDT")'> <input type='button' value='BTC")'> </div>
           <div> <input type='button' value='SPACE'> <input type='button' value='ENTER'> <input type='button' value='BACKSPACE'> </div>
         </form>
 
@@ -43,4 +42,3 @@
       </div>
     </div>
   </body>
-</html>
